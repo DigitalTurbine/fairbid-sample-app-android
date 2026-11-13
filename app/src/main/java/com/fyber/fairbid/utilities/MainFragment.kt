@@ -109,7 +109,7 @@ class MainFragment : Fragment() {
     /**
      * Enum describing the possible choices in the sample application
      */
-    enum class UnitType { Interstitial, Rewarded, Banner, Mrec, TestSuite }
+    enum class UnitType { Interstitial, Rewarded, Banner, Mrec, Native, NativeFeed, TestSuite }
 
     /**
      * a model for the displayed items
@@ -156,6 +156,20 @@ class MainFragment : Fragment() {
                 "Rewarded",
                 R.drawable.fb_ic_rewarded,
                 UnitType.Rewarded
+            )
+        ),
+        Row(
+            payload = UnitRowData(
+                "Native",
+                R.drawable.fb_ic_native,
+                UnitType.Native
+            )
+        ),
+        Row(
+            payload = UnitRowData(
+                "Native Feed",
+                R.drawable.fb_ic_native_feed,
+                UnitType.NativeFeed
             )
         ),
         Row(type = RowType.Separator),

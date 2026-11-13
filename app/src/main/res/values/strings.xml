@@ -12,4 +12,6 @@
     <string name="banner_header_name">Banner</string>
     <string name="interstitial_header_name">Interstitial</string>
     <string name="rewarded_header_name">Rewarded</string>
+    <string name="native_header_name">Native</string>
+    <string name="native_feed_header_name">Native Feed</string>
 </resources>

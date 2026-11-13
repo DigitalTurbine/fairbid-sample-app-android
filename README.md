@@ -13,6 +13,16 @@ Please note that when it comes to actually demonstrating the product "FairBid" a
 * Requesting Banner Ads - [BannerFragment](https://github.com/DigitalTurbine/fairbid-sample-app-android/blob/master/app/src/main/java/com/fyber/fairbid/sample/BannerFragment.kt)
 * Requesting Interstitial Ads - [InterstitialFragment](https://github.com/DigitalTurbine/fairbid-sample-app-android/blob/master/app/src/main/java/com/fyber/fairbid/sample/InterstitialFragment.kt)
 * Requesting Rewarded Ads - [RewardedFragment](https://github.com/DigitalTurbine/fairbid-sample-app-android/blob/master/app/src/main/java/com/fyber/fairbid/sample/RewardedFragment.kt)
+* Requesting Native Ads - [NativeFragment](https://github.com/DigitalTurbine/fairbid-sample-app-android/blob/master/app/src/main/java/com/fyber/fairbid/sample/NativeFragment.kt)
+* Native Ads In-Feed Integration - [NativeFeedFragment](https://github.com/DigitalTurbine/fairbid-sample-app-android/blob/master/app/src/main/java/com/fyber/fairbid/sample/NativeFeedFragment.kt)
+
+#### Native Ads Integration Highlights
+* **Single Ad Slot (`NativeFragment`):** Request via `Native.request(placementId, listener)`, attach a `NativeAdListener` in `onLoad`, wire asset sub-views onto a `NativeAdView`, bind via `adView.setNativeAd(nativeAd)`, and release resources via `adView.destroy()` (or `nativeAd.destroy()` if loaded but never bound).
+* **Scrollable Lists / Feeds (`NativeFeedFragment`):**
+  * **One Ready Ad per Placement:** Prime each placement when the screen opens and hold the loaded `NativeAd` in `readyAds` until an ad row needs it.
+  * **Request on Impression:** Request the next ad from `NativeAdListener.onShow` — never inside `onBindViewHolder` or on scroll. Retry no-fill failures with exponential backoff.
+  * **Destroy on Recycle:** In `onViewRecycled(holder)`, call `holder.destroyAdView()` (`adView.destroy()`), and instantiate a fresh `NativeAdView` on each bind.
+  * **Clean Teardown:** In `onDestroyView()`, detach `recyclerView.adapter = null` (which recycles all bound rows and destroys their ads) and call `destroy()` on any remaining unbound ads in `readyAds`.
 
 #### Support and documentation
 Please visit our [documentation](https://dev-android.fyber.com/docs)
