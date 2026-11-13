@@ -59,6 +59,7 @@ class OnScreenCallbacksHelper {
         const val ON_COMPLETION = "onCompletion()"
         const val ON_ERROR = "onError()"
         const val ON_LOAD = "onLoad()"
+        const val ON_FAILED_TO_LOAD = "onFailedToLoad()"
 
         /**
          * Configures the supplied recycler view to display supplied events.
