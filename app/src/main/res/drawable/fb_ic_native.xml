@@ -1,0 +1,43 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="174dp"
+    android:height="174dp"
+    android:viewportWidth="174"
+    android:viewportHeight="174">
+  <path
+      android:pathData="M61,7L113,7A18,18 0,0 1,131 25L131,149A18,18 0,0 1,113 167L61,167A18,18 0,0 1,43 149L43,25A18,18 0,0 1,61 7z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="6"
+      android:fillColor="#E0ECD1"
+      android:strokeColor="#251546"/>
+  <path
+      android:pathData="M73,23H101"
+      android:strokeWidth="6"
+      android:fillColor="#00000000"
+      android:strokeColor="#251546"
+      android:strokeLineCap="round"/>
+  <!-- Native ad icon box -->
+  <path
+      android:pathData="M56,44L72,44A3,3 0,0 1,75 47L75,63A3,3 0,0 1,72 66L56,66A3,3 0,0 1,53 63L53,47A3,3 0,0 1,56 44z"
+      android:fillColor="#99C167"/>
+  <!-- Native ad title lines -->
+  <path
+      android:pathData="M81,50H119"
+      android:strokeWidth="4"
+      android:fillColor="#00000000"
+      android:strokeColor="#251546"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M81,60H111"
+      android:strokeWidth="3"
+      android:fillColor="#00000000"
+      android:strokeColor="#251546"
+      android:strokeLineCap="round"/>
+  <!-- Native ad media view -->
+  <path
+      android:pathData="M55,74L119,74A3,3 0,0 1,122 77L122,111A3,3 0,0 1,119 114L55,114A3,3 0,0 1,52 111L52,77A3,3 0,0 1,55 74z"
+      android:fillColor="#99C167"/>
+  <!-- Native ad call to action -->
+  <path
+      android:pathData="M84,122L119,122A2,2 0,0 1,121 124L121,134A2,2 0,0 1,119 136L84,136A2,2 0,0 1,82 134L82,124A2,2 0,0 1,84 122z"
+      android:fillColor="#251546"/>
+</vector>
