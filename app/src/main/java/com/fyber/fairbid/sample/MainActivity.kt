@@ -47,6 +47,8 @@ class MainActivity : MainFragment.FragmentListener, AppCompatActivity() {
     private val mrecFragment = BannerFragment.createInstance(UnitType.Mrec)
     private val rewardedFragment = RewardedFragment()
     private val interstitialFragment = InterstitialFragment()
+    private val nativeFragment = NativeFragment()
+    private val nativeFeedFragment = NativeFeedFragment()
     private val mainFragment = MainFragment()
     private var shouldSplashScreen = true
 
@@ -111,6 +113,14 @@ class MainActivity : MainFragment.FragmentListener, AppCompatActivity() {
             }
             UnitType.Interstitial -> {
                 supportFragmentManager.beginTransaction().replace(R.id.fragment_container, interstitialFragment)
+                    .addToBackStack(null).commit()
+            }
+            UnitType.Native -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, nativeFragment)
+                    .addToBackStack(null).commit()
+            }
+            UnitType.NativeFeed -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, nativeFeedFragment)
                     .addToBackStack(null).commit()
             }
             UnitType.TestSuite -> {
