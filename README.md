@@ -1,6 +1,6 @@
-Fyber's FairBid - Sample Android application
-============================================
-This sample app demonstrates the FairBid SDK integration best practices. It is aligned with the FairBid developer documentation - developer.fyber.com, which we recommend you to read as well.
+Digital Turbine FairBid - Sample Android Application
+====================================================
+This sample app demonstrates the FairBid SDK integration best practices. It is aligned with the [Digital Turbine FairBid developer documentation](https://docs.digitalturbine.com/dt-fairbid/), which we recommend you to read as well.
 
 Please note that when it comes to actually demonstrating the product "FairBid" as a monetization platform this sample app might fail due to the fact that ad delivery depends on factors like your country, your device your AAID/IDFA or any other kind of information that ad networks might have collected about you and that are taken into consideration when placing a bid to show an ad to you.
 
@@ -25,7 +25,7 @@ Please note that when it comes to actually demonstrating the product "FairBid" a
   * **Clean Teardown:** In `onDestroyView()`, detach `recyclerView.adapter = null` (which recycles all bound rows and destroys their ads) and call `destroy()` on any remaining unbound ads in `readyAds`.
 
 #### Support and documentation
-Please visit our [documentation](https://dev-android.fyber.com/docs)
+Please visit our [documentation](https://docs.digitalturbine.com/dt-fairbid/)
 
 #### Project License
 
